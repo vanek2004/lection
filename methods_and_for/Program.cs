@@ -1,4 +1,4 @@
-﻿string text = "я очень красивый мальчик" + "и еще очень умный";  
+﻿string text = "я очень красивый мальчик" + " и еще очень умный";  
 
 string AnotherText(string text, char oldValue, char newValue)
 {
