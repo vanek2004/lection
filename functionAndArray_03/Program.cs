@@ -108,47 +108,63 @@
 
 
 
-// Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// Задача №33. Задайте массив. 
+// Напишите программу, которая определяет, присутствует ли заданное число в массиве.
 
-Console.WriteLine("Введите размер массива и число которое вы хотели бы найти в массиве --> ");
-Console.Write("Введите size --> ");
-int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите number --> ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите размер массива и число которое вы хотели бы найти в массиве --> ");
+// Console.Write("Введите size --> ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите number --> ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-int[] array = CreateArray(size);
-PrintArray(array);
+// int[] array = CreateArray(size);
+// PrintArray(array);
 
 
-int[] CreateArray(int length)
-{
-    int[] arr = new int[length];
-    var random = new Random();
+// int[] CreateArray(int length)
+// {
+//     int[] arr = new int[length];
+//     var random = new Random();
 
-    for (int i = 0; i < arr.Length; i++)
-    {
-        arr[i] = random.Next(-9, 10);
-    }
-    return arr;
-}
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = random.Next(-9, 10);
+//     }
+//     return arr;
+// }
 
-void PrintArray(int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write($"{arr[i]} ");
-    }
-}
+// void PrintArray(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write($"{arr[i]} ");
+//     }
+// }
 
-bool FindNumber(int[] arr,int num)                  // метод типа bool выводит true or false
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (arr[i] == num) return true;
-    }
-    return false;
-}
-bool findNumber = FindNumber(array, number);
-Console.WriteLine();
-Console.WriteLine(findNumber ? "yes" : "no");         // задаем нашим true and false текст
+// bool FindNumber(int[] arr,int num)                  // метод типа bool выводит true or false
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] == num) return true;
+//     }
+//     return false;
+// }
+// bool findNumber = FindNumber(array, number);
+// Console.WriteLine();
+// Console.WriteLine(findNumber ? "yes" : "no");         // задаем нашим true and false текст
 
+
+
+
+
+
+
+// Задача №35. Задайте одномерный массив из 123 случайных чиел.
+// Найдите количество элементов массива, значения которых лежат в отрезке (10, 99)
+// [10, 11, 12, 13, 14] --> 5
+
+
+
+// Задача №37. Надите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент и т.д.
+// Результат записать в новом массиве.
+// [1 2 3 4] --> 4 6
