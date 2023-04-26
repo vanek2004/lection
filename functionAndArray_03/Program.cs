@@ -163,8 +163,98 @@
 // Найдите количество элементов массива, значения которых лежат в отрезке (10, 99)
 // [10, 11, 12, 13, 14] --> 5
 
+// Console.Write("- Введите размер массива --> ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] array = CreateArray(size);
+// PrintArray(array);
+// int findQuantityNumbers = FindQuantityNumbers(array);
+// Console.WriteLine();
+// Console.WriteLine($"Колличество чисел в отрезке (10, 99) = {findQuantityNumbers}");
+
+// int[] CreateArray(int length)
+// {
+//     int[] arr = new int[length];
+//     var random = new Random();
+
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = random.Next(0, 124);
+//     }
+//     return arr;
+// }
+
+// void PrintArray(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write($"{arr[i]} ");
+//     }
+// }
+
+// int FindQuantityNumbers (int[] arr)
+// { 
+//     int quantity = 0;
+   
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] >= 10 && arr[i] <= 99) quantity++;
+//     }
+//     return quantity;
+// }
+
+
+
+
+
+
+
 
 
 // Задача №37. Надите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент и т.д.
 // Результат записать в новом массиве.
 // [1 2 3 4] --> 4 6
+
+Console.Write("- Введите размер массива --> ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+int[] array = CreateArray(size);
+PrintArray(array);
+Console.WriteLine();
+int[] productPairsNumbers = ProductPairsNumbers(array);
+PrintArray(productPairsNumbers);
+
+
+int[] CreateArray(int length)
+{
+    int[] arr = new int[length];
+    var random = new Random();
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = random.Next(1, 10);
+    }
+    return arr;
+}
+
+void PrintArray(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+    }
+}
+
+int[] ProductPairsNumbers (int[] arr)
+{ 
+   
+    int size = arr.Length / 2;                                    //делим на 2 для того что бы счетчик потом не вышел за половину
+    if (arr.Length % 2 == 1) size += 1;
+   
+    int[] arrTwo = new int[size];                                 //создаем новый массив, который будем заполнять
+    for (int i = 0; i < arr.Length / 2; i++)
+    {
+        arrTwo[i] = arr[i] * arr[arr.Length - 1 - i];
+    }
+    return arrTwo;
+}
